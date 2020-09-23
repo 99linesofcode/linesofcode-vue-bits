@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormSelect.vue matches the previously stored snapshot 1`] = `
+<select name="delivery_date" class="bg-white focus:outline-none focus:shadow-outline border border-gray-300 py-2 px-4 block w-full appearance-none leading-normal">
+  <option value="2020-01-01">
+    January 1st, 2020
+  </option>
+  <option value="2020-01-02">
+    January 2nd, 2020
+  </option>
+</select>
+`;

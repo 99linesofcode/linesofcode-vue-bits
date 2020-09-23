@@ -1,19 +1,6 @@
-module.exports = function(api) {
-    api.cache(true);
+const devPresets = ['@vue/babel-preset-app'];
+const buildPresets = ['@babel/preset-env'];
 
-    const presets = [
-        [
-            '@babel/preset-env',
-            {
-                modules: 'commonjs',
-                targets: {
-                    node: 'current'
-                }
-            }
-        ]
-    ];
-
-    return {
-        presets
-    };
+module.exports = {
+    presets: process.env.NODE_ENV === 'production' ? buildPresets : devPresets
 };

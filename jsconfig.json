@@ -4,7 +4,7 @@
         "baseUrl": "./resources/js/",
         "paths": {
             "Classes/*": ["classes/*"],
-            "Components/*": ["components/*"],
+            "components/*": ["components/*"],
             "Pages/*": ["pages/*"],
             "Store/*": ["store/*"]
         }
