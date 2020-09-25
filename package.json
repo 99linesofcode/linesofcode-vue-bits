@@ -5,7 +5,6 @@
     "author": "99linesofcode <99linesofcode@gmail.com>",
     "license": "MIT",
     "main": "dist/vue-bits.mjs",
-    "type": "module",
     "files": [
         "dist/*",
         "src/**/*.vue"
