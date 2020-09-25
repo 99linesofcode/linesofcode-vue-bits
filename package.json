@@ -4,10 +4,8 @@
     "description": "",
     "author": "99linesofcode <99linesofcode@gmail.com>",
     "license": "MIT",
-    "main": "dist/vue-bits.ssr.js",
-    "browser": "dist/vue-bits.esm.js",
-    "module": "dist/vue-bits.esm.js",
-    "unpkg": "dist/vue-bits.min.js",
+    "main": "dist/vue-bits.mjs",
+    "type": "module",
     "files": [
         "dist/*",
         "src/**/*.vue"
@@ -15,9 +13,6 @@
     "scripts": {
         "serve": "vue-cli-service serve dev/serve.js",
         "build": "cross-env NODE_ENV=production rollup --config rollup.config.js",
-        "build:ssr": "cross-env NODE_ENV=production rollup --config rollup.config.js --format cjs",
-        "build:es": "cross-env NODE_ENV=production rollup --config rollup.config.js --format es",
-        "build:unpkg": "cross-env NODE_ENV=production rollup --config rollup.config.js --format iife",
         "test": "jest"
     },
     "devDependencies": {
