@@ -15,3 +15,9 @@ export default Vue.extend({
   }
 });
 </script>
+
+<style>
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+</style>
