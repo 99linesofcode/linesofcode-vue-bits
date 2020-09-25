@@ -1,19 +1,23 @@
 <template>
   <div id="app">
-    <form-group label="Hello world" />
+    <form-file name="files" v-model="files" placeholder="Select or drop your file .." multiple="true" />
   </div>
 </template>
 
 <script>
-import Vue from 'vue';
-import { FormGroup } from '@/main';
+import { FormFile } from '@/main';
 
-export default Vue.extend({
-  name: 'ServeDev',
+export default {
+  name: 'App',
   components: {
-    FormGroup,
+    FormFile
+  },
+  data() {
+    return {
+      files: null
+    };
   }
-});
+};
 </script>
 
 <style>
