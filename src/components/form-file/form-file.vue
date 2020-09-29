@@ -1,7 +1,7 @@
 <template>
-  <div class="input-file">
-    <input :id="name" type="file" v-bind="inputAttributes" v-on="inputListeners" />
-    <label :for="name" v-on="labelListeners" :class="{ isDragging: dragging }">
+  <div class="form-file">
+    <input :id="name" class="form-file__input" type="file" v-bind="inputAttributes" v-on="inputListeners" />
+    <label :for="name" class="form-file__label" v-on="labelListeners" :class="{ isDragging: dragging }">
       {{ label }}
     </label>
   </div>
@@ -87,23 +87,23 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.input-file {
+.form-file {
   position: relative;
 
-  input {
+  &__input {
     @apply w-full;
     opacity: 0;
     position: relative;
   }
 
-  label,
-  label:before {
+  &__label,
+  &__label:before {
     @apply py-2 px-4;
     position: absolute;
     top: 0;
   }
 
-  label {
+  &__label {
     @apply bg-white border border-gray-300 leading-normal rounded;
     appearance: none;
     left: 0;
