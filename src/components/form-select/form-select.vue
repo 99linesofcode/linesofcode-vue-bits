@@ -62,7 +62,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .form-select {
   @apply bg-white border border-gray-300 py-2 px-4 block w-full appearance-none leading-normal;
 
