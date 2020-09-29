@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FormGroup.vue matches the previously stored snapshot 1`] = `
-<div class="mt-4"><label for="first_name" class="text-xs uppercase">First name</label>
-  <div class="mock-slot"></div> <span class="text-red-400 text-xs">First name is required.</span>
+<div class="form-group"><label for="first_name" class="form-group__label">First name</label>
+  <div class="mock-slot"></div> <span class="form-group__error">First name is required.</span>
 </div>
 `;

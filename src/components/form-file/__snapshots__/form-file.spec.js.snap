@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FormFile.vue matches the previously stored snapshot 1`] = `
-<div class="input-file"><input id="file" type="file" name="file"> <label for="file" class="">
+<div class="form-file"><label for="file" class="form-file__label">
     Select a file
-  </label></div>
+  </label> <input id="file" type="file" name="file" class="form-file__input"></div>
 `;
