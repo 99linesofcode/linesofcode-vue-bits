@@ -1,9 +1,9 @@
 <template>
-  <div class="input-file">
-    <input :id="name" type="file" v-bind="inputAttributes" v-on="inputListeners" />
-    <label :for="name" v-on="labelListeners" :class="{ isDragging: dragging }">
+  <div class="form-file">
+    <label :for="name" class="form-file__label" v-on="labelListeners" :class="{ isDragging: dragging }">
       {{ label }}
     </label>
+    <input :id="name" class="form-file__input" type="file" v-bind="inputAttributes" v-on="inputListeners" />
   </div>
 </template>
 
@@ -86,31 +86,24 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-.input-file {
-  position: relative;
+<style lang="scss">
+.form-file {
+  @apply my-2;
+  display: inline-block;
+  width: 100%;
 
-  input {
-    @apply w-full;
-    opacity: 0;
-    position: relative;
+  &__label,
+  &__label:before {
+    @apply py-2 -my-2;
+    display: inline-block;
   }
 
-  label,
-  label:before {
-    @apply py-2 px-4;
-    position: absolute;
-    top: 0;
-  }
-
-  label {
-    @apply bg-white border border-gray-300 leading-normal rounded;
+  &__label {
+    @apply bg-white border border-gray-300 leading-normal rounded pr-4;
     appearance: none;
-    left: 0;
-    right: 0;
     overflow-x: hidden;
-    padding-left: 130px;
     white-space: nowrap;
+    width: 100%;
 
     &:hover {
       cursor: pointer;
@@ -126,14 +119,17 @@ export default {
     }
 
     &:before {
-      @apply bg-white border-r border-gray-300 rounded-l;
+      @apply bg-white border-r border-gray-300 leading-normal rounded-l px-4 mr-2;
       content: 'Choose File';
-      left: 0;
     }
 
     &.isDragging {
       @apply bg-gray-200;
     }
+  }
+
+  &__input {
+    @apply sr-only;
   }
 }
 </style>

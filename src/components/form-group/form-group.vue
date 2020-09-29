@@ -1,8 +1,8 @@
 <template>
-  <div class="mt-4">
-    <label v-if="label" :for="name" class="text-xs uppercase">{{ label }}</label>
+  <div class="form-group">
+    <label v-if="label" :for="name" class="form-group__label">{{ label }}</label>
     <slot></slot>
-    <span v-if="error" v-text="error" class="text-red-400 text-xs"></span>
+    <span v-if="error" v-text="error" class="form-group__error"></span>
   </div>
 </template>
 
@@ -15,3 +15,14 @@ export default {
   }
 };
 </script>
+
+<style lang="scss">
+.form-group {
+  &__label {
+    @apply text-xs uppercase;
+  }
+  &__error {
+    @apply text-red-400 text-xs;
+  }
+}
+</style>

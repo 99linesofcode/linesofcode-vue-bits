@@ -1,9 +1,5 @@
 <template>
-  <select
-    v-bind="computedAttributes"
-    v-on="computedListeners"
-    class="bg-white focus:outline-none focus:shadow-outline border border-gray-300 py-2 px-4 block w-full appearance-none leading-normal"
-  >
+  <select class="form-select" v-bind="computedAttributes" v-on="computedListeners">
     <option v-for="o in options" :key="o.text" :value="o.value" :selected="selectedOption(o)">
       {{ o.text }}
     </option>
@@ -65,3 +61,13 @@ export default {
   }
 };
 </script>
+
+<style lang="scss">
+.form-select {
+  @apply bg-white border border-gray-300 py-2 px-4 block w-full appearance-none leading-normal;
+
+  &:focus {
+    @apply outline-none shadow-outline;
+  }
+}
+</style>
